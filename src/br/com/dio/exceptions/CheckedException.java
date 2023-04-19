@@ -19,7 +19,7 @@ public class CheckedException {
             JOptionPane.showMessageDialog(null,
                     "Ocorreu um erro inesperado! Entre em contato com o suporte! " + e.getCause());
         } finally {
-            System.out.println("Chegou no finally!");
+            System.out.println("Passou no finally!");
         }
 
         System.out.println("Apesar da exception ou não, o programa continua...");

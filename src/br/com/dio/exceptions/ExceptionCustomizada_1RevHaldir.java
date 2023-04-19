@@ -3,12 +3,13 @@ package br.com.dio.exceptions;
 import javax.swing.*;
 import java.io.*;
 
-public class ExceptionCustomizada_1 {
+public class ExceptionCustomizada_1RevHaldir {
     public static void main(String[] args) {
         String nomeDoArquivo = JOptionPane.showInputDialog("Nome do arquivo a ser exibido: ");
 
         imprimirArquivoNoConsole(nomeDoArquivo);
-        System.out.println("\nCom exception ou não, o programa continua...");
+        System.out.println("\nIndependentemente da exception ou não, o programa continua...");
+        System.out.println("Print imediatamente antes de sair do main.");
     }
 
     public static void imprimirArquivoNoConsole(String nomeDoArquivo) {
@@ -27,11 +28,11 @@ public class ExceptionCustomizada_1 {
         } catch (ImpossivelAberturaDeArquivoException e) {
             JOptionPane.showMessageDialog(null,
                     e.getMessage());
-            //e.printStackTrace();
-        } catch (IOException ex) {
+            e.printStackTrace();
+        } catch (IOException e) {
             JOptionPane.showMessageDialog(null,
-                    "Ocorreu um erro não esperado, por favor, fale com o suporte." + ex.getMessage());
-            ex.printStackTrace();
+                    "Ocorreu um erro não esperado, por favor, fale com o suporte." + e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -66,6 +67,3 @@ class ImpossivelAberturaDeArquivoException extends Exception {
     }
 
 }
-
-
-
