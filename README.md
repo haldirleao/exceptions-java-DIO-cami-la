@@ -1,3 +1,8 @@
+<h2>
+NOTA: Após o fork, foram adicionados alguns códigos-fonte revisados por haldirleao</h2>
+
+Arquivos com _RevHaldir_ no final do nome.
+
 <h1>
 TRATAMENTO DE EXCEÇÕES EM JAVA</h1>
 
